@@ -9,9 +9,9 @@ const user = new Schema({
         type : Number,
         default : null
     },
-    packs:[{
-        type:Schema.Types.ObjectId,
-        ref:'packs'
-}]
+    // packs:[{
+    //     type:Schema.Types.ObjectId,
+    //     ref:'packs'
+// }]
 })
-module.exports = mongoose.model('newuser',user)
+module.exports = mongoose.model('user',user)

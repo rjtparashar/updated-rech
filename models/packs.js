@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const packs = new Schema({
-    name:{
+    recharge_name:{
         type:String,
         default:null
     },
@@ -26,5 +26,5 @@ const packs = new Schema({
     //         default:null
     // }
 })
-module.exports=mongoose.model('rechpack',packs)
+module.exports=mongoose.model('packs',packs)
 

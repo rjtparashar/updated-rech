@@ -16,22 +16,24 @@ const register = async (req,res)=>{
 }
 const viewplans = async (req,res) =>{
     //  const {addonid} = await packs.findById(req.body.addonid).populate('userId')
-    const result = await userplans.aggregate([ 
+    // const show = await 
+    const result = await user.aggregate([ 
            
      { $lookup:
         {
-          from: "rechpacks",  
-          localField: "user",
-          foreignField: "_id",
+          from: "plans",  
+          localField: "_id",
+          foreignField: "user",
           as: "docs"
         }
       },
-    //   {
-    //       $unwind : '$docs',
+      // {
+      //     $unwind : '$docs',
   
-    //   }   
-    ])
+      // }   
+    ])             
     console.log(result);
+    res.send(result)
 };
 
 module.exports = ({register,viewplans})

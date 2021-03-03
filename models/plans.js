@@ -15,4 +15,4 @@ const plans = new Schema({
         default : null
     } 
 })
-module.exports = mongoose.model('userplans', plans)
+module.exports = mongoose.model('plans', plans)
